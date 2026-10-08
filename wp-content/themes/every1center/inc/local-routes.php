@@ -145,6 +145,66 @@ function every1_local_search_pages() {
 				'When should a family seek emergency or crisis help instead?',
 			),
 		),
+		'drug-rehab-schenectady-ny' => array(
+			'title' => 'Drug Rehab Schenectady NY | Detox & Inpatient Options | Every1 Center',
+			'h1' => 'Drug Rehab, Detox & Inpatient Options for Schenectady, NY',
+			'intro' => 'When someone in Schenectady needs help for alcohol or drug use, the search can quickly become overwhelming. Every1 Center helps individuals and families understand detox, inpatient rehab, residential treatment, PHP, IOP, intervention, and recovery-support options before they speak directly with licensed providers.',
+			'focus' => 'drug rehab Schenectady NY',
+			'context' => 'Families in Schenectady may compare options across the Capital Region and wider Upstate New York. A good decision weighs immediate safety, the level of care a provider recommends, insurance, transportation, and whether the program can meet the person’s needs—not just the first listing in a search result.',
+			'questions' => array(
+				'What should we ask about detox and withdrawal safety?',
+				'How do we compare inpatient and outpatient programs from Schenectady?',
+				'What information should we confirm before speaking with admissions?',
+			),
+		),
+		'drug-rehab-clifton-park-ny' => array(
+			'title' => 'Drug Rehab Clifton Park NY | Detox & Treatment Guidance | Every1 Center',
+			'h1' => 'Drug Rehab & Detox Options for Clifton Park, NY',
+			'intro' => 'Every1 Center provides independent guidance for Clifton Park families comparing drug rehab, medical detox, inpatient treatment, outpatient programs, and intervention support. We do not operate a treatment facility or make clinical decisions; we help you prepare for informed conversations with licensed providers.',
+			'focus' => 'drug rehab Clifton Park NY',
+			'context' => 'A Clifton Park search can include providers throughout the Capital Region and Upstate New York. The appropriate next step depends on the provider’s assessment, availability, practical travel needs, insurance, and the level of support the individual can safely use.',
+			'questions' => array(
+				'How do we decide whether nearby care or a broader search makes sense?',
+				'What should we ask about residential treatment and family communication?',
+				'How do we verify insurance details directly with a provider and plan?',
+			),
+		),
+		'drug-rehab-saratoga-springs-ny' => array(
+			'title' => 'Drug Rehab Saratoga Springs NY | Detox & Inpatient Options | Every1 Center',
+			'h1' => 'Drug Rehab, Detox & Inpatient Options for Saratoga Springs, NY',
+			'intro' => 'Families searching for drug rehab in Saratoga Springs may be comparing detox, residential treatment, inpatient rehab, PHP, IOP, and recovery support. Every1 Center helps organize the questions so you can connect directly with licensed providers and make an informed next decision.',
+			'focus' => 'drug rehab Saratoga Springs NY',
+			'context' => 'The search does not need to stop at one city boundary. Families often balance proximity with a provider’s clinical assessment, availability, insurance participation, schedule, family involvement, and discharge-planning process.',
+			'questions' => array(
+				'What questions help us compare detox, residential care, and outpatient care?',
+				'How can a family plan transportation and communication before an admission call?',
+				'What should we ask about support after a program ends?',
+			),
+		),
+		'drug-rehab-latham-ny' => array(
+			'title' => 'Drug Rehab Latham NY | Detox & Treatment Options | Every1 Center',
+			'h1' => 'Drug Rehab & Detox Treatment Options for Latham, NY',
+			'intro' => 'Every1 Center helps people in Latham and the Capital Region understand the differences between detox, inpatient drug rehab, residential programs, PHP, IOP, intervention support, and recovery planning. Clinical services and admission decisions are made by licensed providers.',
+			'focus' => 'drug rehab Latham NY',
+			'context' => 'A useful treatment search starts with the situation in front of the person and family. Immediate safety, withdrawal concerns, co-occurring needs, practical travel, insurance, and the provider’s own assessment can all affect the appropriate conversation to have next.',
+			'questions' => array(
+				'When should a family ask about medical evaluation or withdrawal concerns?',
+				'What is the difference between a residential program, PHP, and IOP?',
+				'What should we confirm about scheduling, insurance, and family support?',
+			),
+		),
+		'addiction-treatment-capital-region-ny' => array(
+			'title' => 'Addiction Treatment Capital Region NY | Compare Care Options | Every1 Center',
+			'h1' => 'Addiction Treatment Options Across New York’s Capital Region',
+			'intro' => 'Every1 Center provides independent addiction-treatment navigation for people and families in the Capital Region who are comparing detox, inpatient rehab, residential treatment, PHP, IOP, intervention support, and continuing-care options. We help you prepare for direct conversations with licensed providers.',
+			'focus' => 'addiction treatment Capital Region NY',
+			'context' => 'The Capital Region includes many communities, and the right next conversation may not be limited to the closest result. Families can compare a provider’s assessment, scope of care, availability, insurance, travel requirements, family communication, and plan for the transition after treatment.',
+			'questions' => array(
+				'How do we compare treatment options across the Capital Region?',
+				'Which questions help separate a program directory from a real provider conversation?',
+				'How do we plan safely when the situation feels urgent?',
+			),
+		),
 	);
 }
 
@@ -179,6 +239,27 @@ function every1_local_search_document_title( $title ) {
 }
 add_filter( 'pre_get_document_title', 'every1_local_search_document_title' );
 
+/**
+ * Answers are intentionally editorial and navigation-focused. They do not
+ * diagnose, recommend a level of care, or represent Every1 as a provider.
+ */
+function every1_local_search_faqs( $page ) {
+	return array(
+		array(
+			'question' => 'Does Every1 Center provide detox or inpatient drug rehab?',
+			'answer'   => 'No. Every1 Center is an independent treatment-navigation and family-support resource. Detoxification, inpatient rehab, and other clinical services are provided by licensed providers that make their own assessment and admission decisions.',
+		),
+		array(
+			'question' => 'Do we need to know the right level of care before we ask for help?',
+			'answer'   => 'No. A useful first step is to identify urgent safety concerns, the questions the family has, and the practical factors that matter. A licensed provider can explain what it offers and whether it can appropriately evaluate the situation.',
+		),
+		array(
+			'question' => 'How should we compare ' . $page['focus'] . ' options?',
+			'answer'   => 'Compare the provider’s own assessment process, availability, insurance information, travel requirements, family communication, medication policies, and transition planning. Do not rely on a directory listing or proximity alone.',
+		),
+	);
+}
+
 function every1_local_search_meta() {
 	$slug  = get_query_var( 'every1_local_search' );
 	$pages = every1_local_search_pages();
@@ -189,20 +270,53 @@ function every1_local_search_meta() {
 	$page = $pages[ $slug ];
 	$url  = home_url( '/' . $slug . '/' );
 	$desc = wp_trim_words( $page['intro'], 32, '...' );
+	$faq    = every1_local_search_faqs( $page );
 	$schema = array(
 		'@context' => 'https://schema.org',
-		'@type'    => 'WebPage',
-		'name'     => $page['title'],
-		'description' => $desc,
-		'url'      => $url,
-		'about'    => array(
-			'@type' => 'Thing',
-			'name'  => $page['focus'],
-		),
-		'isPartOf' => array(
-			'@type' => 'WebSite',
-			'name'  => 'Every1 Center',
-			'url'   => home_url( '/' ),
+		'@graph'   => array(
+			array(
+				'@type'       => 'WebPage',
+				'@id'          => $url . '#webpage',
+				'name'         => $page['title'],
+				'description'  => $desc,
+				'url'          => $url,
+				'about'        => array(
+					'@type' => 'Thing',
+					'name'  => $page['focus'],
+				),
+				'isPartOf'     => array(
+					'@type' => 'WebSite',
+					'name'  => 'Every1 Center',
+					'url'   => home_url( '/' ),
+				),
+				'breadcrumb'   => array( '@id' => $url . '#breadcrumb' ),
+			),
+			array(
+				'@type'           => 'BreadcrumbList',
+				'@id'              => $url . '#breadcrumb',
+				'itemListElement'  => array(
+					array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => home_url( '/' ) ),
+					array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Treatment Navigation', 'item' => home_url( '/drug-rehab-upstate-new-york/' ) ),
+					array( '@type' => 'ListItem', 'position' => 3, 'name' => $page['h1'], 'item' => $url ),
+				),
+			),
+			array(
+				'@type'      => 'FAQPage',
+				'@id'         => $url . '#faq',
+				'mainEntity' => array_map(
+					function( $item ) {
+						return array(
+							'@type'          => 'Question',
+							'name'           => $item['question'],
+							'acceptedAnswer' => array(
+								'@type' => 'Answer',
+								'text'  => $item['answer'],
+							),
+						);
+					},
+					$faq
+				),
+			),
 		),
 	);
 
