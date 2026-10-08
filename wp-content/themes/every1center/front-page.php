@@ -13,8 +13,8 @@ get_header(); ?>
 		<div class="container hero__inner">
 			<div class="hero__content">
 				<p class="eyebrow"><?php esc_html_e( '24/7 Confidential Help — Upstate NY', 'every1center' ); ?></p>
-				<h1 id="hero-heading"><?php esc_html_e( 'Clear, confidential help finding the right addiction treatment options.', 'every1center' ); ?></h1>
-				<p class="hero__lede"><?php esc_html_e( 'Every1 Center is an independent treatment-navigation and intervention resource. We help individuals and families understand options, prepare for next steps, and connect with appropriate licensed providers.', 'every1center' ); ?></p>
+				<h1 id="hero-heading"><?php esc_html_e( 'Drug Rehab, Detox &amp; Inpatient Treatment Guidance in Troy, NY', 'every1center' ); ?></h1>
+				<p class="hero__lede"><?php esc_html_e( 'Confidential help for individuals and families comparing detox, inpatient drug rehab, residential treatment, PHP, IOP, and recovery support. Every1 Center helps you understand choices and connect directly with appropriate licensed providers.', 'every1center' ); ?></p>
 				<div class="hero__actions">
 					<?php every1_phone_link( __( 'Call (518) 714-0355', 'every1center' ), 'btn btn-primary btn-lg' ); ?>
 					<a class="btn btn-outline btn-lg" href="<?php echo esc_url( home_url( '/request-a-call/' ) ); ?>"><?php esc_html_e( 'Request a Callback', 'every1center' ); ?></a>
@@ -62,12 +62,12 @@ get_header(); ?>
 
 			<div class="card-grid card-grid--3">
 				<a class="service-card" href="<?php echo esc_url( home_url( '/detox/' ) ); ?>">
-					<h3><?php esc_html_e( 'Detox Options', 'every1center' ); ?></h3>
+					<h3><?php esc_html_e( 'Medical Detox Options', 'every1center' ); ?></h3>
 					<p><?php esc_html_e( 'Understand when medically supervised withdrawal care may be appropriate and what to ask a provider.', 'every1center' ); ?></p>
 					<span class="card-cta"><?php esc_html_e( 'Explore detox options', 'every1center' ); ?> &rarr;</span>
 				</a>
 				<a class="service-card" href="<?php echo esc_url( home_url( '/programs/inpatient-rehab/' ) ); ?>">
-					<h3><?php esc_html_e( 'Residential Treatment Options', 'every1center' ); ?></h3>
+					<h3><?php esc_html_e( 'Inpatient Drug Rehab', 'every1center' ); ?></h3>
 					<p><?php esc_html_e( 'Compare residential programs, questions for admissions teams, and factors that may affect fit.', 'every1center' ); ?></p>
 					<span class="card-cta"><?php esc_html_e( 'Compare options', 'every1center' ); ?> &rarr;</span>
 				</a>
