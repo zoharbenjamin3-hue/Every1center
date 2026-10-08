@@ -353,6 +353,24 @@ section { padding: clamp(3rem, 6vw, 5rem) 0; }
 .section-header--center { margin-left: auto; margin-right: auto; text-align: center; }
 .section-header h2 { margin-bottom: 0.6rem; }
 .section-sub { color: var(--c-muted); font-size: var(--fs-md); margin: 0; }
+.content-section__narrow { max-width: 1120px; }
+
+/* -------- FAQ -------- */
+.faq-list { display: grid; gap: 0.8rem; }
+.faq-item {
+	background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius);
+	padding: 0 1.2rem;
+}
+.faq-item summary {
+	cursor: pointer; list-style: none; position: relative; padding: 1.15rem 2rem 1.15rem 0;
+	font-weight: 700; color: var(--c-ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+	content: '+'; position: absolute; right: 0; top: 0.9rem; color: var(--c-primary); font-size: 1.5rem; line-height: 1;
+}
+.faq-item[open] summary::after { content: '\2212'; }
+.faq-item p { color: var(--c-muted); max-width: 72ch; padding: 0 0 1.15rem; margin: 0; }
 
 /* -------- Card grid -------- */
 .card-grid { display: grid; gap: 1.25rem; }
@@ -670,12 +688,12 @@ section { padding: clamp(3rem, 6vw, 5rem) 0; }
     <nav class="main-navigation" id="nav" aria-label="Primary">
       <ul class="primary-menu">
         <li><a href="index.html" style="background:#eef4fb;color:#0b5cab;">Home</a></li>
-        <li><a href="interior.html">Treatment Options</a></li>
-        <li><a href="#">Interventions</a></li>
+        <li><a href="city-albany.html">Treatment Options</a></li>
+		<li><a href="city-pages.html">Interventions</a></li>
         <li><a href="#">Family Support</a></li>
         <li><a href="#">Therapy</a></li>
         <li><a href="#">Insurance</a></li>
-        <li><a href="#">Locations</a></li>
+        <li><a href="city-pages.html">Locations</a></li>
         <li><a href="blog-post.html">Blog</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
@@ -783,10 +801,10 @@ section { padding: clamp(3rem, 6vw, 5rem) 0; }
         <h2>Upstate NY, the Capital Region, and beyond.</h2>
       </header>
       <ul class="location-grid">
-        <li><a href="#">Troy, NY</a></li><li><a href="#">Albany, NY</a></li>
-        <li><a href="#">Saratoga Springs, NY</a></li><li><a href="#">Clifton Park, NY</a></li>
-        <li><a href="#">Latham, NY</a></li><li><a href="#">Hudson Valley</a></li>
-        <li><a href="#">Newburgh, NY</a></li><li><a href="#" class="all-link">View all locations &rarr;</a></li>
+        <li><a href="city-troy.html">Troy, NY</a></li><li><a href="city-albany.html">Albany, NY</a></li>
+        <li><a href="city-saratoga-springs.html">Saratoga Springs, NY</a></li><li><a href="city-clifton-park.html">Clifton Park, NY</a></li>
+        <li><a href="city-latham.html">Latham, NY</a></li><li><a href="city-schenectady.html">Schenectady, NY</a></li>
+        <li><a href="city-pages.html" class="all-link">View city pages &rarr;</a></li>
       </ul>
     </div>
   </section>
