@@ -17,5 +17,6 @@ require_once EVERY1_THEME_DIR . '/inc/theme-setup.php';
 require_once EVERY1_THEME_DIR . '/inc/enqueue.php';
 require_once EVERY1_THEME_DIR . '/inc/nav-walker.php';
 require_once EVERY1_THEME_DIR . '/inc/seo.php';
+require_once EVERY1_THEME_DIR . '/inc/local-routes.php';
 require_once EVERY1_THEME_DIR . '/inc/template-tags.php';
 require_once EVERY1_THEME_DIR . '/inc/customizer.php';
