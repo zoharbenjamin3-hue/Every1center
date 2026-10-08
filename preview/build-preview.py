@@ -186,8 +186,8 @@ HOME_MAIN = '''
     <div class="container hero__inner">
       <div class="hero__content">
         <p class="eyebrow">24/7 Confidential Help &mdash; Upstate NY</p>
-        <h1>Clear, confidential help finding the right addiction treatment options.</h1>
-        <p class="hero__lede">Every1 Center is an independent treatment-navigation and intervention resource. We help individuals and families understand options, prepare for next steps, and connect with appropriate licensed providers.</p>
+        <h1>Drug Rehab, Detox &amp; Inpatient Treatment Guidance in Troy, NY</h1>
+        <p class="hero__lede">Confidential help for individuals and families comparing detox, inpatient drug rehab, residential treatment, PHP, IOP, and recovery support. Every1 Center helps you understand choices and connect directly with appropriate licensed providers.</p>
         <div class="hero__actions">
           <a class="btn btn-primary btn-lg phone-link" href="tel:+15187140355">&#9742; Call (518) 714-0355</a>
           <a class="btn btn-outline-light btn-lg" href="#">Request a Callback</a>
@@ -230,8 +230,8 @@ HOME_MAIN = '''
         <p class="section-sub">We make the process easier to understand: what each level of care means, what questions to ask, and how to plan a safe next step with a licensed provider. Every1 Center does not provide medical treatment.</p>
       </header>
       <div class="card-grid card-grid--3">
-        <a class="service-card" href="interior.html"><h3>Detox Options</h3><p>Understand when medically supervised withdrawal care may be appropriate and what to ask a provider.</p><span class="card-cta">Explore detox options &rarr;</span></a>
-        <a class="service-card" href="#"><h3>Residential Treatment Options</h3><p>Compare residential programs, questions for admissions teams, and factors that may affect fit.</p><span class="card-cta">Compare options &rarr;</span></a>
+        <a class="service-card" href="interior.html"><h3>Medical Detox Options</h3><p>Understand when medically supervised withdrawal care may be appropriate and what to ask a provider.</p><span class="card-cta">Explore detox options &rarr;</span></a>
+        <a class="service-card" href="#"><h3>Inpatient Drug Rehab</h3><p>Compare residential programs, questions for admissions teams, and factors that may affect fit.</p><span class="card-cta">Compare options &rarr;</span></a>
         <a class="service-card" href="#"><h3>PHP &amp; IOP</h3><p>Learn how partial hospitalization and intensive outpatient care differ from residential care.</p><span class="card-cta">Compare PHP/IOP &rarr;</span></a>
         <a class="service-card" href="#"><h3>Professional Interventions</h3><p>Structured support for families preparing for a difficult conversation about getting help.</p><span class="card-cta">Learn more &rarr;</span></a>
         <a class="service-card" href="#"><h3>Therapy &amp; Counseling</h3><p>Explore common therapy approaches and questions to discuss with a licensed clinician.</p><span class="card-cta">See therapies &rarr;</span></a>
@@ -425,7 +425,7 @@ def main():
     blog_body = breadcrumbs([('Home', False), ('Education', False), ('How Long Does Fentanyl Stay in Your System', True)]) + BLOG_MAIN + CTA_BAND
 
     (OUT_DIR / 'index.html').write_text(
-        page('Every1 Center | Treatment Navigation, Intervention & Family Support', css, home_body, 'home'),
+        page('Drug Rehab, Detox & Inpatient Treatment Guidance | Every1 Center Troy NY', css, home_body, 'home'),
         encoding='utf-8')
     (OUT_DIR / 'interior.html').write_text(
         page('Alcohol Detox & Recovery Support — Every1 Center', css, interior_body, 'detox'),
