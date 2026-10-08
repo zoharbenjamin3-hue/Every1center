@@ -17,6 +17,19 @@ if ( ! $page ) {
 get_header();
 ?>
 <main id="primary" class="site-main local-search-page">
+	<div class="page-header-strip">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="<?php esc_attr_e( 'Breadcrumb', 'every1center' ); ?>">
+				<ol>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'every1center' ); ?></a></li>
+					<span class="bc-sep" aria-hidden="true">&raquo;</span>
+					<li><a href="<?php echo esc_url( home_url( '/drug-rehab-upstate-new-york/' ) ); ?>"><?php esc_html_e( 'Treatment Navigation', 'every1center' ); ?></a></li>
+					<span class="bc-sep" aria-hidden="true">&raquo;</span>
+					<li aria-current="page"><?php echo esc_html( $page['h1'] ); ?></li>
+				</ol>
+			</nav>
+		</div>
+	</div>
 	<section class="hero" aria-labelledby="local-search-heading">
 		<div class="container hero__inner">
 			<div class="hero__content">
@@ -80,6 +93,38 @@ get_header();
 				<li><span class="steps-list__num">2</span><h3>Clarify the care need</h3><p>Ask licensed providers about detox, residential, PHP, IOP, medication needs, and any co-occurring mental-health concerns.</p></li>
 				<li><span class="steps-list__num">3</span><h3>Confirm the details</h3><p>Verify insurance directly with the provider and plan, understand availability, and ask about travel, family contact, and discharge planning.</p></li>
 			</ol>
+		</div>
+	</section>
+
+	<section class="content-section" aria-labelledby="faq-heading">
+		<div class="container content-section__narrow">
+			<header class="section-header">
+				<p class="eyebrow">Answers for families</p>
+				<h2 id="faq-heading">Common questions about finding help.</h2>
+				<p class="section-sub">These answers explain Every1 Center’s role and how to make a more informed provider call. They do not replace a medical or clinical assessment.</p>
+			</header>
+			<div class="faq-list">
+				<?php foreach ( every1_local_search_faqs( $page ) as $faq ) : ?>
+					<details class="faq-item">
+						<summary><?php echo esc_html( $faq['question'] ); ?></summary>
+						<p><?php echo esc_html( $faq['answer'] ); ?></p>
+					</details>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+
+	<section class="trust-bar" aria-labelledby="standards-heading">
+		<div class="container">
+			<header class="section-header section-header--center">
+				<p class="eyebrow">A safer way to search</p>
+				<h2 id="standards-heading">Information first. Provider decisions second.</h2>
+				<p class="section-sub">Every1 Center can help a family understand options and prepare questions. Licensed providers remain responsible for clinical assessment, treatment, availability, and admission.</p>
+			</header>
+			<div class="hero__actions text-center" style="justify-content:center; margin-bottom:0;">
+				<a class="btn btn-outline" href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>">About Every1 Center</a>
+				<?php every1_phone_link( __( 'Talk Through Options', 'every1center' ), 'btn btn-primary' ); ?>
+			</div>
 		</div>
 	</section>
 
