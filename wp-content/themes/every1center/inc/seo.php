@@ -101,7 +101,7 @@ function every1_organization_schema() {
 		'@context'    => 'https://schema.org',
 		'@type'       => 'Organization',
 		'name'        => 'Every1 Center',
-		'description' => 'Independent addiction-treatment navigation, intervention support, and family education for people exploring licensed care options.',
+		'description' => 'Independent drug rehab, detox, inpatient treatment, intervention, and family navigation support for people exploring licensed care options.',
 		'url'         => home_url( '/' ),
 		'contactPoint' => array(
 			'@type'       => 'ContactPoint',
