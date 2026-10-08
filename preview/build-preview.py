@@ -75,12 +75,12 @@ def header(active=''):
     <nav class="main-navigation" id="nav" aria-label="Primary">
       <ul class="primary-menu">
         <li><a href="index.html"{cls('home')}>Home</a></li>
-        <li><a href="interior.html"{cls('detox')}>Treatment Options</a></li>
-        <li><a href="#">Interventions</a></li>
+        <li><a href="city-albany.html"{cls('detox')}>Treatment Options</a></li>
+		<li><a href="city-pages.html">Interventions</a></li>
         <li><a href="#">Family Support</a></li>
         <li><a href="#">Therapy</a></li>
         <li><a href="#">Insurance</a></li>
-        <li><a href="#">Locations</a></li>
+        <li><a href="city-pages.html">Locations</a></li>
         <li><a href="blog-post.html"{cls('blog')}>Blog</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
@@ -277,10 +277,10 @@ HOME_MAIN = '''
         <h2>Upstate NY, the Capital Region, and beyond.</h2>
       </header>
       <ul class="location-grid">
-        <li><a href="#">Troy, NY</a></li><li><a href="#">Albany, NY</a></li>
-        <li><a href="#">Saratoga Springs, NY</a></li><li><a href="#">Clifton Park, NY</a></li>
-        <li><a href="#">Latham, NY</a></li><li><a href="#">Hudson Valley</a></li>
-        <li><a href="#">Newburgh, NY</a></li><li><a href="#" class="all-link">View all locations &rarr;</a></li>
+        <li><a href="city-troy.html">Troy, NY</a></li><li><a href="city-albany.html">Albany, NY</a></li>
+        <li><a href="city-saratoga-springs.html">Saratoga Springs, NY</a></li><li><a href="city-clifton-park.html">Clifton Park, NY</a></li>
+        <li><a href="city-latham.html">Latham, NY</a></li><li><a href="city-schenectady.html">Schenectady, NY</a></li>
+        <li><a href="city-pages.html" class="all-link">View city pages &rarr;</a></li>
       </ul>
     </div>
   </section>
@@ -396,6 +396,154 @@ BLOG_MAIN = '''
 </main>'''
 
 
+# These are rendered counterparts of the completed WordPress city-page routes.
+# They make the city-page design reviewable without running WordPress locally.
+CITY_PAGES = [
+    {
+        'file': 'city-albany.html',
+        'label': 'Albany, NY',
+        'title': 'Drug Rehab Albany NY | Detox & Inpatient Treatment Guidance',
+        'h1': 'Drug Rehab, Detox & Inpatient Treatment Guidance in Albany, NY',
+        'intro': 'When you are looking for drug rehab in Albany, the first decision is often what level of care may fit the situation. Every1 Center helps individuals and families understand detox, inpatient rehab, residential treatment, PHP, IOP, and recovery-support options before connecting directly with licensed providers.',
+        'context': 'Albany is a practical starting point for many Capital Region families, but the best next step may be in Albany, Troy, Saratoga, the Hudson Valley, or elsewhere in New York. Availability, insurance, transportation, and the provider’s clinical assessment all matter.',
+    },
+    {
+        'file': 'city-troy.html',
+        'label': 'Troy, NY',
+        'title': 'Drug Rehab Troy NY | Detox & Inpatient Treatment Guidance',
+        'h1': 'Drug Rehab & Detox Options in Troy, NY',
+        'intro': 'Every1 Center provides confidential guidance for people in Troy comparing drug rehab, detox, inpatient treatment, outpatient programs, and family intervention support. We do not operate a treatment facility or provide medical care; we help you prepare for an informed conversation with licensed providers.',
+        'context': 'For families in Troy, nearby care can include options across the wider Capital Region. A thoughtful search weighs the provider’s assessment, the level of care, travel needs, and family involvement—not distance alone.',
+    },
+    {
+        'file': 'city-schenectady.html',
+        'label': 'Schenectady, NY',
+        'title': 'Drug Rehab Schenectady NY | Detox & Inpatient Options',
+        'h1': 'Drug Rehab, Detox & Inpatient Options for Schenectady, NY',
+        'intro': 'When someone in Schenectady needs help for alcohol or drug use, the search can quickly become overwhelming. Every1 Center helps individuals and families understand detox, inpatient rehab, residential treatment, PHP, IOP, intervention, and recovery-support options before they speak directly with licensed providers.',
+        'context': 'Families in Schenectady may compare options across the Capital Region and wider Upstate New York. A good decision weighs immediate safety, the level of care a provider recommends, insurance, transportation, and whether the program can meet the person’s needs—not just the first listing in a search result.',
+    },
+    {
+        'file': 'city-clifton-park.html',
+        'label': 'Clifton Park, NY',
+        'title': 'Drug Rehab Clifton Park NY | Detox & Treatment Guidance',
+        'h1': 'Drug Rehab & Detox Options for Clifton Park, NY',
+        'intro': 'Every1 Center provides independent guidance for Clifton Park families comparing drug rehab, medical detox, inpatient treatment, outpatient programs, and intervention support. We do not operate a treatment facility or make clinical decisions; we help you prepare for informed conversations with licensed providers.',
+        'context': 'A Clifton Park search can include providers throughout the Capital Region and Upstate New York. The appropriate next step depends on the provider’s assessment, availability, practical travel needs, insurance, and the level of support the individual can safely use.',
+    },
+    {
+        'file': 'city-saratoga-springs.html',
+        'label': 'Saratoga Springs, NY',
+        'title': 'Drug Rehab Saratoga Springs NY | Detox & Inpatient Options',
+        'h1': 'Drug Rehab, Detox & Inpatient Options for Saratoga Springs, NY',
+        'intro': 'Families searching for drug rehab in Saratoga Springs may be comparing detox, residential treatment, inpatient rehab, PHP, IOP, and recovery support. Every1 Center helps organize the questions so you can connect directly with licensed providers and make an informed next decision.',
+        'context': 'The search does not need to stop at one city boundary. Families often balance proximity with a provider’s clinical assessment, availability, insurance participation, schedule, family involvement, and discharge-planning process.',
+    },
+    {
+        'file': 'city-latham.html',
+        'label': 'Latham, NY',
+        'title': 'Drug Rehab Latham NY | Detox & Treatment Options',
+        'h1': 'Drug Rehab & Detox Treatment Options for Latham, NY',
+        'intro': 'Every1 Center helps people in Latham and the Capital Region understand the differences between detox, inpatient drug rehab, residential programs, PHP, IOP, intervention support, and recovery planning. Clinical services and admission decisions are made by licensed providers.',
+        'context': 'A useful treatment search starts with the situation in front of the person and family. Immediate safety, withdrawal concerns, co-occurring needs, practical travel, insurance, and the provider’s own assessment can all affect the appropriate conversation to have next.',
+    },
+]
+
+
+def city_page_body(item):
+    links = ''.join(
+        f'<li><a href="{city["file"]}">{city["label"]}</a></li>'
+        for city in CITY_PAGES if city['file'] != item['file']
+    )
+    return f'''
+{breadcrumbs([('Home', False), ('Treatment Navigation', False), (item['label'], True)])}
+<main class="site-main local-search-page">
+  <section class="hero" aria-labelledby="city-heading">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow">Capital Region &amp; Upstate New York</p>
+        <h1 id="city-heading">{item['h1']}</h1>
+        <p class="hero__lede">{item['intro']}</p>
+        <div class="hero__actions">
+          <a class="btn btn-primary btn-lg phone-link" href="tel:+15187140355">&#9742; Talk Through Options</a>
+          <a class="btn btn-outline-light btn-lg" href="#family-questions">Family Questions</a>
+        </div>
+        <ul class="hero__trust">
+          <li><span>&check;</span> Detox and withdrawal-care questions</li>
+          <li><span>&check;</span> Inpatient and outpatient comparisons</li>
+          <li><span>&check;</span> Family next-step planning</li>
+        </ul>
+      </div>
+      <aside class="hero__card" aria-label="Important disclosure">
+        <h2>Independent guidance.</h2>
+        <p>Every1 Center does not provide detoxification, inpatient rehab, or medical treatment. Licensed providers determine clinical appropriateness, availability, and admission.</p>
+        <a class="btn btn-primary btn-block" href="tel:+15187140355">Request a Confidential Call</a>
+      </aside>
+    </div>
+  </section>
+
+  <section aria-labelledby="local-search-heading">
+    <div class="container content-section__narrow">
+      <header class="section-header">
+        <p class="eyebrow">A local search, without assumptions</p>
+        <h2 id="local-search-heading">Use the search to ask better questions.</h2>
+        <p class="section-sub">{item['context']}</p>
+      </header>
+      <div class="card-grid card-grid--3">
+        <article class="service-card"><p class="eyebrow">Step 1</p><h3>Start with safety.</h3><p>If there is an immediate medical, overdose, withdrawal, or mental-health emergency, call 911 or 988. A website is not emergency care.</p></article>
+        <article class="service-card"><p class="eyebrow">Step 2</p><h3>Compare the right questions.</h3><p>Ask licensed providers how they assess needs, what care they offer, and how they handle insurance, family contact, and transitions.</p></article>
+        <article class="service-card"><p class="eyebrow">Step 3</p><h3>Confirm the details.</h3><p>Verify availability, transportation, coverage, medication policies, and next-step planning directly with the provider and insurance plan.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" aria-labelledby="levels-heading">
+    <div class="container">
+      <header class="section-header section-header--center">
+        <p class="eyebrow">Treatment levels</p>
+        <h2 id="levels-heading">Understand the options before choosing a program.</h2>
+      </header>
+      <ol class="steps-list">
+        <li><span class="steps-list__num">1</span><h3>Medical detox</h3><p>For withdrawal concerns, a licensed provider can explain its medical evaluation process and whether it can safely assess the situation.</p></li>
+        <li><span class="steps-list__num">2</span><h3>Inpatient or residential care</h3><p>Compare structure, clinical services, length of stay, family communication, and planning for the next stage of care.</p></li>
+        <li><span class="steps-list__num">3</span><h3>PHP, IOP, or outpatient care</h3><p>Ask how programming fits with housing, work, school, transportation, and ongoing support needs.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="family-questions" aria-labelledby="faq-heading">
+    <div class="container content-section__narrow">
+      <header class="section-header"><p class="eyebrow">Answers for families</p><h2 id="faq-heading">Common questions about finding help.</h2></header>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Does Every1 Center operate a detox or inpatient rehab program?</summary><p>No. Every1 Center is an independent treatment-navigation and family-support resource. Licensed providers deliver clinical services and make their own assessment and admission decisions.</p></details>
+        <details class="faq-item"><summary>Do we need to know the right level of care before calling?</summary><p>No. It is reasonable to start with immediate safety concerns, the family’s questions, and practical factors. A licensed provider can explain what it offers and whether it can evaluate the situation.</p></details>
+        <details class="faq-item"><summary>How should we compare options near {item['label']}?</summary><p>Compare assessment process, availability, insurance, travel, family communication, medication policies, and transition planning. Proximity alone should not decide the outcome.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance" aria-labelledby="nearby-heading">
+    <div class="container">
+      <header class="section-header"><p class="eyebrow">Explore city guidance</p><h2 id="nearby-heading">Capital Region drug rehab and detox information.</h2></header>
+      <ul class="location-grid">{links}<li><a href="city-pages.html" class="all-link">View city pages &rarr;</a></li></ul>
+    </div>
+  </section>
+  {CTA_BAND}
+</main>'''
+
+
+def city_hub_body():
+    cards = ''.join(
+        f'<a class="service-card" href="{item["file"]}"><h3>Drug Rehab {item["label"]}</h3><p>Full city guidance: detox, inpatient treatment, outpatient options, family questions, and clear disclosure.</p><span class="card-cta">View completed page &rarr;</span></a>'
+        for item in CITY_PAGES
+    )
+    return f'''
+<main class="site-main">
+  <section class="hero"><div class="container hero__inner"><div class="hero__content"><p class="eyebrow">Capital Region &amp; Upstate NY</p><h1>Drug Rehab and Detox Guidance by City</h1><p class="hero__lede">Explore complete, family-first city pages for Albany, Troy, Schenectady, Clifton Park, Saratoga Springs, and Latham. Every1 Center provides independent guidance, not medical treatment.</p></div><aside class="hero__card"><h2>Choose a city.</h2><p>Each page uses the same complete decision framework—no bare location routes.</p><a class="btn btn-primary btn-block" href="city-albany.html">Start with Albany</a></aside></div></section>
+  <section><div class="container"><header class="section-header"><p class="eyebrow">Completed city pages</p><h2>Built for the questions a family actually has.</h2></header><div class="card-grid card-grid--3">{cards}</div></div></section>
+</main>'''
+
+
 def page(title, css, body, active=''):
     return f'''<!doctype html>
 <html lang="en-US">
@@ -434,7 +582,15 @@ def main():
         page('How Long Does Fentanyl Stay in Your System — Every1 Center', css, blog_body, 'blog'),
         encoding='utf-8')
 
-    print('Wrote preview/index.html, preview/interior.html, preview/blog-post.html')
+    (OUT_DIR / 'city-pages.html').write_text(
+        page('Drug Rehab and Detox Guidance by City | Every1 Center', css, city_hub_body()),
+        encoding='utf-8')
+    for city in CITY_PAGES:
+        (OUT_DIR / city['file']).write_text(
+            page(city['title'], css, city_page_body(city), 'detox'),
+            encoding='utf-8')
+
+    print('Wrote homepage, interior, blog, city hub, and city-page previews')
 
 
 if __name__ == '__main__':
