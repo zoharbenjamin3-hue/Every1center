@@ -21,7 +21,7 @@
 					<?php
 				}
 				?>
-				<p class="footer-tagline"><?php esc_html_e( 'Independent addiction-treatment guidance, family support, and education. Confidential, compassionate, 24/7.', 'every1center' ); ?></p>
+				<p class="footer-tagline"><?php esc_html_e( 'Drug rehab, detox, inpatient treatment, and intervention guidance for individuals and families. Confidential, compassionate, 24/7.', 'every1center' ); ?></p>
 				<address class="footer-address">
 					8 Shepherd Dr Suite 2<br>
 					Troy, NY 12180<br>
