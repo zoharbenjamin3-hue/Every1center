@@ -13,6 +13,42 @@ function every1_is_rank_math_active() {
 	return class_exists( 'RankMath' ) || defined( 'RANK_MATH_VERSION' );
 }
 
+/**
+ * The import bundle contains legacy scaffolding for pages that have not yet
+ * received finished editorial content. Keep those pages out of search until
+ * they are completed instead of publishing thin city or treatment pages.
+ */
+function every1_is_unfinished_import_page() {
+	if ( ! is_singular() ) {
+		return false;
+	}
+
+	global $post;
+	if ( ! $post || ! in_array( $post->post_type, array( 'page', 'post' ), true ) ) {
+		return false;
+	}
+
+	return false !== strpos( (string) $post->post_content, 'placeholder page generated during the site rebuild' );
+}
+
+function every1_noindex_unfinished_import_page( $robots ) {
+	if ( every1_is_unfinished_import_page() ) {
+		$robots['noindex'] = true;
+		$robots['follow']  = true;
+	}
+	return $robots;
+}
+add_filter( 'wp_robots', 'every1_noindex_unfinished_import_page' );
+
+function every1_rank_math_noindex_unfinished_import_page( $robots ) {
+	if ( every1_is_unfinished_import_page() ) {
+		$robots['index']  = 'noindex';
+		$robots['follow'] = 'follow';
+	}
+	return $robots;
+}
+add_filter( 'rank_math/frontend/robots', 'every1_rank_math_noindex_unfinished_import_page' );
+
 function every1_meta_description() {
 	if ( every1_is_rank_math_active() ) {
 		return;
