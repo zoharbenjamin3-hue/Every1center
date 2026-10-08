@@ -1,0 +1,18 @@
+/*
+Theme Name: Every1 Center
+Theme URI: https://playground.every1center.com
+Author: Every1 Center
+Author URI: https://playground.every1center.com
+Description: Clean, accessible WordPress theme for Every1 Center — a Troy, NY inpatient detox and drug & alcohol rehab referral and support service. Built for trust, clarity, and conversion: prominent call CTAs, accessible typography, schema-friendly markup, and full Rank Math SEO integration.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: every1center
+Tags: healthcare, medical, rehab, one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, full-width-template, threaded-comments, translation-ready, accessibility-ready
+*/
+
+/* Main stylesheet imports the actual styles from assets/css/main.css via enqueue. */
+/* This file exists for theme metadata and the WordPress admin. */
